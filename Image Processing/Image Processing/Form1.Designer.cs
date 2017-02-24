@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.uxSave = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.uxOpenFile = new System.Windows.Forms.OpenFileDialog();
             this.uxSaveFile = new System.Windows.Forms.SaveFileDialog();
             this.uxOpen = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxSave
@@ -44,19 +44,6 @@
             this.uxSave.Text = "Process";
             this.uxSave.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(260, 20);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Image Process";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // uxOpenFile
-            // 
-            this.uxOpenFile.FileName = "uxOpenFile";
-            // 
             // uxOpen
             // 
             this.uxOpen.Location = new System.Drawing.Point(12, 26);
@@ -65,28 +52,39 @@
             this.uxOpen.TabIndex = 2;
             this.uxOpen.Text = "Open";
             this.uxOpen.UseVisualStyleBackColor = true;
+            this.uxOpen.Click += new System.EventHandler(this.uxOpen_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(95, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Image Processing";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 58);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.uxOpen);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.uxSave);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Image Process";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button uxSave;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog uxOpenFile;
         private System.Windows.Forms.SaveFileDialog uxSaveFile;
         private System.Windows.Forms.Button uxOpen;
+        private System.Windows.Forms.Label label1;
     }
 }
 
